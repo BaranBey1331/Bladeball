@@ -1,0 +1,83 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "BladeBall Hub V1.2", HidePremium = false, SaveConfig = true, IntroText = "Loading", ConfigFolder = "myhubscript"})
+
+local Tab = Window:MakeTab({
+	Name = "Blade Ball",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddButton({
+	Name = "omg hub",
+	Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/Omgshit/animesouls/main/.Ok"))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Redz Hub",
+	Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/BladeBall/main/eng"))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Tunx Hub",
+	Callback = function()
+     loadstring(game:HttpGet("https://raw.githubusercontent.com/TunxDeveloper/BladeBall/main/main"))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Sirius hub",
+	Callback = function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/xdevslasher/Siriusisbetter/main/xyz.bb.lua"))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Keyboard mobile",
+	Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/advxzivhsjjdhxhsidifvsh/mobkeyboard/main/
+  	end    
+})
+
+local Tab = Window:MakeTab({
+	Name = "Blade Ball Live Event",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddButton({
+	Name = "Live Event Hub",
+	Callback = function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/FFJ1/Roblox-Exploits/main/scripts/autoparryEvent.lua"))()
+  	end    
+})
+
+local Tab = Window:MakeTab({
+	Name = "Settings",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddButton({
+    Name = "Destroy Gui",
+    Callback = function()
+            OrionLib:Destroy()
+    end
+})
+
+local httpHook;
+httpHook = hookfunction(game.HttpGet, function(self,...)
+   local Args = {...}
+   if Args[1] and type(Args[1]) == "string" then
+       if Args[1]:match("checkPremium.php") then
+           return "true"
+       end
+   end
+   return httpHook(self,...)
+end)
+
+local OrionLib = loadstring(game:HttpGet(('https://hypernite.xyz/Backup/Orion/source.lua')))() -- Backed up to my host
+OrionLib:Init()
